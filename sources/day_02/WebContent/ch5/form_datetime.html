@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+     <title> �� ��</title>
+     <style>
+	 body {
+		background-color:#fff; 
+	 }
+	 form fieldset{
+		margin-bottom:25px; 
+	 }
+	 form legend{
+		font-size:15px;
+		font-weight:600; 
+	 }
+	.reg {
+		font-size:14px;
+		width:110px;
+		color:#390;
+		font-weight:bold;		
+		float:left;
+		text-align:right;
+		margin-right:10px;
+	 }
+	 form ul li{
+		list-style:none; 
+		margin: 15px 0;	
+		font-size:14px;	
+	 }
+ 
+
+	 #member, #stuffs {
+		width:50px; 
+	 }
+	 </style>
+  </head>
+  <body>
+	<form>
+    <fieldset>
+    <legend>
+    	<label for="today">Today</label>
+        <input type="datetime-local" id="today">     
+    </legend>
+    </fieldset>
+ <fieldset id="register">
+    <legend>���� ������ �����ϼ���</legend>
+    	<ul>
+        	<li>
+		  <label><span class="reg">��ȣ����</span> 
+		  <input type="color" id="color"></label>
+            </li>        
+	       <li>
+            	  <span class="reg">��û ����<small>(ȸȭ)</small></span>
+               <label><input type="radio" name="spk" value="low" checked>���� ȸȭ(�ʱ�)</label>
+               <label> <input type="radio" name="spk" value="middle">���� ȸȭ(�߱�)</label>
+               <label> <input type="radio" name="spk" value="high">���� ȸȭ(���)</label>
+            </li>
+	        <li>
+            	<span class="reg">��û ����<small>(�ڰ�)</small></span>
+               <label> <input type="radio" name="spk" value="toeic">TOEIC</label>
+               <label> <input type="radio" name="spk" value="toefl">TOEFL</label>
+               <label> <input type="radio" name="spk" value="opic">OPIC</label>
+            </li>                    
+        	<li>
+            	<span class="reg">���ɺо�</span>
+             <label>   <input type="text" id="interest" list="engChoices"></label>
+                <datalist id="engChoices">
+                	<option value="grammar" label="����"></option>
+                    <option value="voca" label="����"></option>
+                    <option value="speaking" label="ȸȭ"></option>
+                    <option value="listening" label="������"></option>
+                    <option value="news" label="����û��"></option>
+                </datalist>                         
+            </li>
+        </ul>
+    </fieldset>
+    <fieldset id="timetable">
+    <legend>���� �ð��� �����ϼ���</legend>
+    	<ul>
+        	<li>
+            	<label class="reg" for="startw">���� ��</label>
+            	<input type="week" id="startw">
+            </li>
+        	<li>
+            	<label class="reg" for="startt">���� �ð�</label>
+            	<input type="time" id="startt">
+            </li>            
+        </ul>
+        
+    <legend>파일업로드</legend>
+   	<li>
+   		<label for="pf">사진</label>
+   		<input type="file" name="pf" id="pf">
+   	</li>
+    </fieldset>
+  </form>
+  </body>
+</html>
